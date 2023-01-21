@@ -12,6 +12,7 @@ namespace Microsoft.Extensions.Configuration
     internal sealed class ReferenceCountedProviderManager : IDisposable
     {
         private readonly object _replaceProvidersLock = new object();
+
         private ReferenceCountedProviders _refCountedProviders = ReferenceCountedProviders.Create(new List<IConfigurationProvider>());
         private bool _disposed;
 
